@@ -116,6 +116,7 @@ namespace NMailerTest
                     File.Delete(string.Format( file));
                 }
             }
+            MailerConfiguration.TemplateDirectory = "TemplateTest";
             var client = new SmtpClient();
             client.DeliveryMethod = SmtpDeliveryMethod.SpecifiedPickupDirectory;
             client.PickupDirectoryLocation = path;
